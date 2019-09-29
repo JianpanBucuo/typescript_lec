@@ -32,6 +32,10 @@ interface SearchFunc {
     (source: string, subString: string): boolean;
 }
 
+interface searchFunc2 {
+    (source: string, subString: string): boolean;
+}
+
 let mySearchFunc: SearchFunc = (source: string, subString: string):boolean => {
         return source.search(subString) != -1;
 }
@@ -59,3 +63,17 @@ function push(array: any[], ...rest: any[]){
 }
 let a = [];
 push(a, 1, 2, 3);
+
+
+// 重载
+// 重载允许一个函数 接受不同数量或类型的参数时，作出不同处理
+
+function reverse(x:number): number;
+function reverse(x: string): string;
+function reverse(x: number | string): number | string {
+    if (typeof x === 'number') {
+        return Number(x.toString().split('').reverse().join(''));
+    } else if (typeof x === 'string') {
+        return x.split('').reverse().join('');
+    }
+}
