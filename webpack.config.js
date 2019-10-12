@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 module.exports = {
-    entry: "./src/demo1-basic-types/demo1.ts",
+    entry: "./src/demo1-basic/demo8-decorator.ts",
     module:{
         rules:[
             {
